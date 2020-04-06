@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/react-quill-preview/static/css/main.5383ba55.chunk.css",
+    "main.js": "/react-quill-preview/static/js/main.fd4905de.chunk.js",
+    "main.js.map": "/react-quill-preview/static/js/main.fd4905de.chunk.js.map",
+    "runtime-main.js": "/react-quill-preview/static/js/runtime-main.10da01f1.js",
+    "runtime-main.js.map": "/react-quill-preview/static/js/runtime-main.10da01f1.js.map",
+    "static/css/2.293f06b2.chunk.css": "/react-quill-preview/static/css/2.293f06b2.chunk.css",
+    "static/js/2.f8b70f5d.chunk.js": "/react-quill-preview/static/js/2.f8b70f5d.chunk.js",
+    "static/js/2.f8b70f5d.chunk.js.map": "/react-quill-preview/static/js/2.f8b70f5d.chunk.js.map",
+    "index.html": "/react-quill-preview/index.html",
+    "precache-manifest.c1f20cc26618613a87f8c87b3619f0f1.js": "/react-quill-preview/precache-manifest.c1f20cc26618613a87f8c87b3619f0f1.js",
+    "service-worker.js": "/react-quill-preview/service-worker.js",
+    "static/css/2.293f06b2.chunk.css.map": "/react-quill-preview/static/css/2.293f06b2.chunk.css.map",
+    "static/css/main.5383ba55.chunk.css.map": "/react-quill-preview/static/css/main.5383ba55.chunk.css.map",
+    "static/js/2.f8b70f5d.chunk.js.LICENSE.txt": "/react-quill-preview/static/js/2.f8b70f5d.chunk.js.LICENSE.txt",
+    "static/media/slick-theme.css": "/react-quill-preview/static/media/slick.f97e3bbf.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.10da01f1.js",
+    "static/css/2.293f06b2.chunk.css",
+    "static/js/2.f8b70f5d.chunk.js",
+    "static/css/main.5383ba55.chunk.css",
+    "static/js/main.fd4905de.chunk.js"
+  ]
+}
