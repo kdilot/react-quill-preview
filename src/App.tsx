@@ -1,26 +1,85 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+import Preview from 'components/Preview';
+import styled from 'styled-components';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App: React.FC = () => {
+    const [value, setValue] = useState<string>('');
+    return (
+        <Container>
+            <h1>React Quill Editor Preview</h1>
+            <ContentsLayout>
+                <WriteLayout>
+                    <ReactQuill
+                        theme={'snow'}
+                        onChange={(c, d, s, e) => {
+                            setValue(c === '<p><br></p>' ? '' : c);
+                        }}
+                        value={value}
+                        modules={Modules}
+                    />
+                </WriteLayout>
+                <Br />
+                <Preview html={value} />
+            </ContentsLayout>
+        </Container>
+    );
+};
+
+const Modules = {
+    toolbar: [
+        [{ size: [] }],
+        ['bold', 'italic', 'underline', 'strike'],
+        [
+            { align: [false, 'center', 'right'] },
+            { list: 'ordered' },
+            { list: 'bullet' },
+        ],
+        [{ color: [] }, { background: [] }],
+        ['image', 'link', 'video'],
+        ['code-block'],
+    ],
+    clipboard: {
+        // toggle to add extra line breaks when pasting HTML:
+        matchVisual: false,
+    },
+};
+
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: auto;
+    margin: 5rem 10rem;
+`;
+
+const ContentsLayout = styled.div`
+    display: flex;
+    flex-direction: row;
+`;
+
+const WriteLayout = styled.div`
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .quill {
+        display: inline-block;
+        width: 800px;
+        height: 700px;
+    }
+    .ql-toolbar {
+        background: #eaecec;
+    }
+`;
+
+const Br = styled.div`
+    width: 50px;
+`;
 
 export default App;
