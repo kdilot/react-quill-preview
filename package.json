@@ -29,7 +29,7 @@
         "deploy": "gh-pages -d build",
         "eject": "react-scripts eject"
     },
-    "homepage": "http://kdilot.github.io/react-quill-preview",
+    "homepage": "https://kdilot.github.io/react-quill-preview",
     "eslintConfig": {
         "extends": "react-app"
     },
